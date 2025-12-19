@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="ias.css">
 </head>
 <body>
+
+  <div class="slideshow">
+  <img src="product1.jpg" class="slide active" alt="IAS WiFi Socket">
+  <img src="product2.jpg" class="slide" alt="IAS WiFi Socket">
+  <!-- <img src="product3.jpg" class="slide" alt="IAS WiFi Socket"> -->
+  </div>
+
   <header>
     <h2>IAS WiFi Socket</h2>
   </header>
@@ -27,11 +34,7 @@
     <p style="max-width:700px;margin:0 auto 30px;font-size:1.1rem;color:#555;">
       Control multiple appliances remotely with our Wi‑Fi enabled socket extension. Designed for homes, offices, and bulk installations.
     </p>
-    <div class="slideshow">
-  <img src="product.jpg" class="slide active" alt="IAS WiFi Socket">
-  <img src="product2.jpg" class="slide" alt="IAS WiFi Socket">
-  <img src="product3.jpg" class="slide" alt="IAS WiFi Socket">
-  </div>
+
   </section>
 
   <section class="features">
@@ -55,7 +58,7 @@
   </footer>
   <a href="https://wa.me/2348106124552" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
-  <script>
+<script>
   let currentSlide = 0;
   const slides = document.querySelectorAll(".slide");
 
@@ -65,4 +68,5 @@
     slides[currentSlide].classList.add("active");
   }, 3000); // changes every 3 seconds
 </script>
+
 </html>
