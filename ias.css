@@ -8,7 +8,7 @@
     header {
       background: linear-gradient(135deg, #0a84ff, #005ecb);
       color: #fff;
-      padding: 25px 20px;
+      padding: 5px 10px;
       text-align: center;
     }
     .hero {
@@ -72,20 +72,23 @@
     }
     .whatsapp-float:hover {
       background-color: #1ebe5d;
-
     }
 .slideshow {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;          /* take full width of screen */
+  max-width: 300px;     /* optional: limit width */
+  height: auto;         /* automatic height */
+  margin: 0 auto;       /* center horizontally */
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 12px 35px rgba(0,0,0,0.18);
 }
 
 .slide {
-  width: 100%;
+  width: 100%;          /* fill container */
+  height: auto;         /* maintain aspect ratio */
   display: none;
+  object-fit: cover;    /* crop if needed */
 }
 
 .slide.active {
