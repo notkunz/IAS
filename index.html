@@ -27,7 +27,11 @@
     <p style="max-width:700px;margin:0 auto 30px;font-size:1.1rem;color:#555;">
       Control multiple appliances remotely with our Wi‑Fi enabled socket extension. Designed for homes, offices, and bulk installations.
     </p>
-    <img src="product.jpg" alt="IAS WiFi Socket WiFi Controlled Socket Extension" style="width:100%;max-width:900px;border-radius:20px;box-shadow:0 12px 35px rgba(0,0,0,0.18);" />
+    <div class="slideshow">
+  <img src="product1.jpg" class="slide active" alt="IAS WiFi Socket">
+  <img src="product2.jpg" class="slide" alt="IAS WiFi Socket">
+  <img src="product3.jpg" class="slide" alt="IAS WiFi Socket">
+  </div>
   </section>
 
   <section class="features">
@@ -51,4 +55,14 @@
   </footer>
   <a href="https://wa.me/2348106124552" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 </body>
+  <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }, 3000); // changes every 3 seconds
+</script>
 </html>
