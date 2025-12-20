@@ -1,260 +1,96 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: 'Segoe UI', sans-serif;
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #0a84ff, #005ecb);
+      color: #fff;
+      padding: 1px 10px;
+      text-align: center;
+    }
+    .hero {
+      padding: 30px 20px;
+      text-align: center;
+      background: white;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      background: #0a84ff;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .features {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .feature-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0a84ff;
+      color: white;
+      margin-top: 40px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+    }
+.slideshow {
+  position: relative;
+  width: 100%;          /* take full width of screen */
+  max-width: 300px;     /* optional: limit width */
+  height: auto;         /* automatic height */
+  margin: 0 auto;       /* center horizontally */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.18);
 }
 
-body{
-  background:#0b0f14;
-  color:#eaeaea;
+.slide {
+  width: 100%;          /* fill container */
+  height: auto;         /* maintain aspect ratio */
+  display: none;
+  object-fit: cover;    /* crop if needed */
 }
 
-/* NAVBAR */
-.navbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 40px;
-  background:rgba(11,15,20,0.85);
-  backdrop-filter: blur(10px);
-  z-index:999;
+.slide.active {
+  display: block;
 }
-
-.nav-logo{
-  font-size:1.4rem;
-  font-weight:700;
-  letter-spacing:2px;
-}
-
-.nav-links{
-  display:flex;
-  gap:25px;
-  list-style:none;
-}
-
-.nav-links a{
-  color:#ccc;
-  text-decoration:none;
-  font-weight:500;
-}
-
-.nav-links a:hover{ color:#fff; }
-
-.nav-cta{
-  padding:8px 18px;
-  background:#00ffc6;
-  color:#000 !important;
-  border-radius:20px;
-  font-weight:700;
-}
-
-/* HERO */
-.hero{
-  height:100vh;
-  background:url('hero-bg.jpg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.7),#0b0f14);
-}
-
-.hero-content{
-  position:relative;
-  max-width:90%;
-  padding:20px;
-}
-
-.hero h1{
-  font-size:3rem;
-  margin-bottom:20px;
-}
-
-.hero p{
-  font-size:1.2rem;
-  color:#bbb;
-  margin-bottom:30px;
-}
-
-.btn-primary{
-  background:#00ffc6;
-  color:#000;
-  padding:14px 32px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:700;
-}
-
-/* FEATURES */
-.features{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  padding:80px 20px;
-  flex-wrap:wrap;
-}
-
-.feature-box{
-  background:linear-gradient(145deg,#111826,#0b0f14);
-  padding:40px;
-  border-radius:14px;
-  width:260px;
-  text-align:center;
-  cursor:pointer;
-  transition:.3s;
-  box-shadow:0 0 25px rgba(0,255,198,.05);
-}
-
-.feature-box:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 35px rgba(0,255,198,.2);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:40px;
-  color:#777;
-}
-
-/* MODALS */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.75);
-  z-index:2000;
-}
-
-.modal-content{
-  background:#111826;
-  max-width:500px;
-  margin:15% auto;
-  padding:30px;
-  border-radius:12px;
-  text-align:center;
-}
-
-.close{
-  float:right;
-  font-size:26px;
-  cursor:pointer;
-}
-
-/* PRODUCT IMAGES UNDER CTA */
-.product-images{
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  margin-top:40px;
-  flex-wrap:wrap;
-}
-
-.product-images img{
-  width:120px;
-  height:auto;
-  border-radius:12px;
-  background:#0b0f14;
-  padding:10px;
-  box-shadow:0 0 20px rgba(0,255,198,.15);
-  transition:.3s;
-}
-
-.product-images img:hover{
-  transform:translateY(-6px) scale(1.05);
-  box-shadow:0 0 30px rgba(0,255,198,.35);
-}
-
-/* PRODUCT SLIDESHOW */
-.product-slider{
-  position:relative;
-  margin-top:40px;
-  height:160px;
-}
-
-.product-slide{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%) scale(.95);
-  width:300px;
-  opacity:0;
-  transition:opacity .8s ease, transform .8s ease;
-  border-radius:14px;
-  background:#0b0f14;
-  padding:10px;
-  box-shadow:0 0 25px rgba(0,255,198,.2);
-}
-
-.product-slide.active{
-  opacity:1;
-  transform:translateX(-50%) scale(1);
-}
-
-/* HERO CONTENT RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .btn-primary {
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
-
-  .product-slider {
-    height: 120px; /* smaller for mobile */
-  }
-
-  .product-slide {
-    width: 100px;
-    padding: 6px;
-  }
-}
-
-/* SMALLER MOBILE */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .btn-primary {
-    padding: 10px 18px;
-    font-size: 0.85rem;
-  }
-
-  .product-slider {
-    height: 100px;
-  }
-
-  .product-slide {
-    width: 90px;
-    padding: 5px;
-  }
-
-  .features {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 50px 10px;
-  }
-}
-
-
