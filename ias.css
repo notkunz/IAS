@@ -76,8 +76,8 @@ body {
 .slideshow {
   position: relative;
   width: 100%;          /* take full width of screen */
-  max-width: 200px;     /* optional: limit width */
-  height: 180px;         /* automatic height */
+  max-width: 400px;     /* optional: limit width */
+  height: auto;         /* automatic height */
   margin: 0 auto;       /* center horizontally */
   border-radius: 20px;
   overflow: hidden;
@@ -94,4 +94,5 @@ body {
 .slide.active {
   display: block;
 }
+
 
